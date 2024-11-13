@@ -1,7 +1,6 @@
 package mobilautomation.steps;
 
 import io.appium.java_client.AppiumDriver;
-import io.qameta.allure.Attachment;
 import mobilautomation.base.BaseTest;
 import mobilautomation.utils.LoggerManager;
 import org.openqa.selenium.*;
@@ -107,16 +106,6 @@ public class BaseSteps {
             clickElement(by);
         else
             logger.error("Not clicked " + by + " because condition is false");
-    }
-
-    public void waitByMilliSeconds(int milliseconds) {
-        logger.info("Entered.");
-        try {
-            Thread.sleep(milliseconds);
-            logger.info("Driver is waiting during " + milliseconds + " ms");
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     public void scrollByElementHeight(WebElement scrollArea, WebElement firstElement, String direction) {
